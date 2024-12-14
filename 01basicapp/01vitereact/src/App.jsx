@@ -1,11 +1,17 @@
 
-
+import chai from "./chai"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-  <h1>chai aur react with vite | HC</h1>
+    <>
+     <chai/>
+     // ek hi element export kr skte hai
+     <h1>Chai aur react</h1>
+    </>
+   
+  
   )
 }
 
