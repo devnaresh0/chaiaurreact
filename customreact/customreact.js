@@ -14,17 +14,30 @@ function customRender(reactElement,container){
 
 }
 
-const reactElement = {
-    type: 'a',
-    props: {
-        href: 'https://google.com',
-        target: '_blank'
+// const ReactElement = {
+//     hitesh: 'a',
+//     props: {
+//         href: 'https://google.com',
+//         target: '_blank'
+//     },
+//     children: 'Click me to visit Google'
+// }
+const anotherElement = <a href="https://google.com"target='_blank'>Visit Google</a>
+const reactElement = React.createElement(
+    'a',
+    {
+        href:'https://google.com',
+        target:'_blank',
     },
-    children: 'Click me to visit Google'
-}
+    'Click me to visit google'
+
+)
 
 
-const mainContainer =document.querySelector('#root')
+const mainContainer =(document.querySelector('#root')).render(
+
+    <App/>
+)
 
 
 customRender(reactElement,mainContainer)
