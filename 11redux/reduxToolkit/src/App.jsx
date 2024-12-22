@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState,useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import './App.css'
 import Addtodo from './components/Addtodo'
 import Todos from './components/Todo'
-import { Provider } from 'react-redux'
+import { Provider, useDispatch } from 'react-redux'
 import { store } from './app/store'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading,setLoading] = useState(true);
+  const dispatch = useDispatch()
 
   return (
     <>
